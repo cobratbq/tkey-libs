@@ -15,7 +15,7 @@ void led_set(uint32_t ledvalue)
 	*led = ledvalue;
 }
 
-uint32_t led_get()
+uint32_t led_get(void)
 {
 	return *led;
 }
