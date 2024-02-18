@@ -7,7 +7,7 @@
 #include <tkey/lib.h>
 #include <tkey/qemu_debug.h>
 
-void assert_fail(const char *assertion, const char *file, unsigned int line,
+__attribute__((noreturn)) void assert_fail(const char *assertion, const char *file, unsigned int line,
 		 const char *function)
 {
 	qemu_puts("assert: ");

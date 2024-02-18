@@ -66,9 +66,9 @@ void writebyte(uint8_t b)
 	}
 }
 
-void write(const uint8_t *buf, size_t nbytes)
+void write(const uint8_t *const buf, size_t nbytes)
 {
-	for (int i = 0; i < nbytes; i++) {
+	for (size_t i = 0; i < nbytes; i++) {
 		writebyte(buf[i]);
 	}
 }
@@ -82,13 +82,13 @@ uint8_t readbyte(void)
 	}
 }
 
-int read(uint8_t *buf, size_t bufsize, size_t nbytes)
+int read(uint8_t *const buf, size_t bufsize, size_t nbytes)
 {
 	if (nbytes > bufsize) {
 		return -1;
 	}
 
-	for (int n = 0; n < nbytes; n++) {
+	for (size_t n = 0; n < nbytes; n++) {
 		buf[n] = readbyte();
 	}
 
