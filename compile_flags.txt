@@ -1,0 +1,24 @@
+# clangd, basic instructions to assist LSP-support
+# (copied from Makefile, best to keep in sync or slightly tweak for benefit of clangd)
+-target
+riscv32-unknown-none-elf
+-march=rv32iczmmul
+-mabi=ilp32
+-mcmodel=medany
+-static
+-std=gnu99
+-O2
+-ffast-math
+-fno-common
+-fno-builtin-printf
+-fno-builtin-putchar
+-nostdlib
+-nostdlibinc
+-mno-relax
+-flto
+-Wall
+-Wextra
+-Werror=implicit-function-declaration
+-I
+include
+
